@@ -13,9 +13,9 @@ app.use(express.json());
 
 // Routes
 app.use('/api/contact', contactRoutes);
-
-// Start server
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.get("/api/test", (req, res) => {
+  res.json({ message: "Backend is working on Vercel!" });
 });
+
+// ✅ Export the app for Vercel
+module.exports = app;
