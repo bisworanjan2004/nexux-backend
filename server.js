@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: process.env.ORIGIN_URL
+  origin: process.env.ORIGIN_URL.replace(/\/$/, "") // Remove trailing slash if any
 }));
 app.use(express.json());
 
