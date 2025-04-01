@@ -17,5 +17,5 @@ app.get("/api/test", (req, res) => {
   res.json({ message: "Backend is working on Vercel!" });
 });
 
-// ✅ Export the app for Vercel
+// ✅ Export the app for Vercel (NO app.listen())
 module.exports = app;
